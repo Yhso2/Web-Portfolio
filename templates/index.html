@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block headersection %}
+
+<section class="header-container">
+  <img class="profile-image" display="block" src="\static\assets\garcia.jpg" alt="center-profile">
+  <h1>Kamusta! I'm Joshua GARCIA</h1>
+
+  <div class="content-text">
+    <h2>Python Engineer</h2>
+    <p>
+      Highly proficient in Python, C++, and Javascript
+    </p>
+  </div>
+  <a href="#footer" class="btn btn-secondary">Contact Me</a>
+</section>
+{% endblock %}
+
+{% block body %}
+<section id="projects" class="project-container container">
+
+  <div class="division"></div>
+
+  <div class="content-text">
+    <h2>Special Skills</h2>
+    <div class="container" align="center">
+      <table style="text-align: center;">
+        <tr>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <img class="skills" src="\static\assets\python.png"
+              alt="Flask" width="50" height="50" style="filter: grayscale(80%)">
+              <h4>Python</h4>
+            </div>
+          </td>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <img class="skills" src="\static\assets\django-icon.svg"
+               alt="Django" width="50" height="50" style="filter: grayscale(100%)">
+              <h4>Django</h4>
+            </div>
+          </td>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;" width="50" height="50">
+              <img class="skills" src="\static\assets\flask1.jpg"
+               alt="Flask" width="50" height="50"style="filter: grayscale(100%)">
+              <h4>Flask</h4>
+            </div>
+          </td>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <img class="skills" src="\static\assets\c++.png"
+               alt="C++" width="50" height="50" style="filter: grayscale(80%)">
+              <h4>C++</h4>
+            </div>
+          </td>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fa-brands fa-git-alt"></i></h2>
+              <h4>Git</h4>
+            </div>
+          </td>
+          </table>
+          <table style="text-align: center;">
+
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fa-brands fa-react" ></i></h2>
+              <h4>React</h4>
+            </div>
+          </td>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fa-brands fa-css3-alt"></i></h2>
+              <h4>CSS</h4>
+            </div>
+          </td>
+          <td  class="cards" style="padding: 20px;">
+            <div class="textcard"  style="padding: 20px;">
+              <h2><i class="fa-brands fa-js"></i></h2>
+              <h4>Javascript</h4>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>    
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="project-container container">
+  <div class="division"></div>
+
+  <div class="content-text">
+    <h2>Popular Project</h2>
+    <p>Check out some of my projects</p>
+  </div>
+
+  <div class="container">
+    <div class="textcard">
+      <table>
+        <tr>
+          <td>
+            <img src="https://github.com/dmdhrumilmistry/pyhtools/blob/main/.images/PyHTools.png?raw=True"
+              alt="Pyhtools image" style="width: auto; max-width: 100%;">
+          </td>
+          <td>
+            <div class="container">
+              <h3>PyHtools</h3>
+              <p style="text-align: justify;">Python Hacking Tools (PyHTools) (pht) is a collection of python written
+                hacking
+                tools consisting of network
+                scanner, arp spoofer and detector, dns spoofer, code injector, packet sniffer, network jammer, email
+                sender,
+                downloader, wireless password harvester credential harvester, keylogger, download&execute, and
+                reverse_backdoor along with website login bruteforce, scraper, web spider etc. PHT also includes
+                malwares
+                which are undetectable by the antiviruses.</p>
+              <a href="https://github.com/dmdhrumilmistry/pyhtools" class="btn btn-secondary">View Project <i class="fab fa-github"></i></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <a href="{{url_for('projects_page')}}" class="btn btn-secondary">See More <i class="fas fa-arrow-right"></i></a>
+</section>
+{% endblock %}
