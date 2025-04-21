@@ -165,9 +165,9 @@ body {
 
 .division {
   width: 100%;
-  height: 2px;
+  height: 5px;
   background-color: var(--card-background);
-  margin: 5.5rem 0;
+  margin: 2.5rem 0;
 }
 
 /* Projects */
@@ -336,25 +336,33 @@ body {
 }
 
 /* Text Card */
-.cards {
+.skills-grid {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-
+  justify-content: center;
+  gap: 10px;  
+  padding: 20px 100px;
 }
 
 .textcard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-  /* 5px rounded corners */
-  padding: 10px;
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s;
 }
-i.fa-brands.fa-git-alt:hover {
-    transform: size(1.2);
-}
-/* On mouse-over, add a deeper shadow */
+
+/* On mouse-over, add a deeper shadow and scales */
 .textcard:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+/* Space between the text and the image */
+.textcard img,
+.textcard i {  
+  margin-bottom: 10px;
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
