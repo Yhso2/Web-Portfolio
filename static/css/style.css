@@ -360,7 +360,6 @@ body {
   transform: scale(1.05);
 }
 /* Space between the text and the image */
-.textcard img,
 .textcard i {  
   margin-bottom: 10px;
 }
