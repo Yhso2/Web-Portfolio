@@ -26,30 +26,38 @@ const toggleSwitch = document.querySelector(
 //  Store color theme for future visits
 
 function switchTheme(e) {
+  document.body.classList.add('user-interacted');
   if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark"); //add this
-  } else {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light"); //add this
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark"); //add this
   }
 }
 
 toggleSwitch.addEventListener("change", switchTheme, false);
 
-// Save user preference on load
+// Hides / Shows the toggle switch based on the current theme
 
-const currentTheme = localStorage.getItem("theme")
- if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  if (currentTheme === "dark") {
+const currentTheme = localStorage.getItem("theme") 
+  if (currentTheme === "light") {
     toggleSwitch.checked = true;
   }
-  else {
+  else {    
     toggleSwitch.checked = false;
-  }
  }
- else {
-  document.documentElement.setAttribute("data-theme", "dark");
-  toggleSwitch.checked = true;
- }
+
+
+  // Home link
+const homeLink = document.getElementById('home-link');
+
+  homeLink.addEventListener('click', function (e) {
+    const onHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+
+    if (onHomePage) {
+      e.preventDefault(); // stop reload
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // smoothly scroll up
+    }
+  });
+
