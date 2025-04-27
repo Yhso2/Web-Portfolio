@@ -13,7 +13,7 @@
   --secondary-color: #ffd35c;
   --bg-primary: #ffffff;
   --text-color: #222222;
-  --text-color-two: #ffffff;
+  --text-color-two: #222222;
   --bg-secondary: #222222;
   --card-background: #f4f4f4;
   --bg-secondary-two: #111111;
@@ -36,7 +36,7 @@
   --secondary-color: #ffd35c;
   --bg-primary: #222222;
   --text-color: hsl(0, 0%, 100%);
-  --text-color-two: #222222;
+  --text-color-two: #ffffff;
   --bg-secondary: #ffffff;
   --card-background: hsl(0, 0%, 23%);
   --bg-secondary-two: #f4f4f4;
@@ -153,6 +153,7 @@ body {
 
 }
 
+/* Profile pic */
 @keyframes bounce {
   from {
     transform: translateY(0px);
@@ -363,12 +364,34 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  background: white;
+  background: var(--bg-primary);
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.textcard h4{
+  color: var(--text-color-two);
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;  
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.skill-icons .square{
+  fill: var(--text-color-two);
+}
+
+.skill-icons .path{
+  fill: var(--bg-primary);
 }
 
 /* On mouse-over, add a deeper shadow and scales */
@@ -377,15 +400,11 @@ body {
   transform: scale(1.05);
 }
 /* Space between the text and the image */
-.textcard img,
-.textcard svg,
-.textcard i {
+.textcard img {
   width: 50px;
   height: 50px;
   object-fit: contain;
   display: block;
-  margin-bottom: 10px;
-  filter: grayscale(100%);
 }
 
 .project-card {
