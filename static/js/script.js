@@ -61,3 +61,4 @@ const homeLink = document.getElementById('home-link');
     }
   });
 
+ // Blurry navbar to be added

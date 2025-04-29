@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block headersection %}
-
+<!--Tech Stack-->
 <section class="header-container">
   <img class="profile-image" display="block" src="\static\assets\garcia.jpg" alt="center-profile">
   <br>
-  <h1>Kumusta! I'm Joshua Garcia</h1>
+  <h1 style="font-family: 'Libre Bodoni', serif; font-weight: 500;">Kumusta! I'm Joshua Garcia</h1>
   <p><i class="fa-solid fa-map-pin" style="color: #ff0000;"></i> Laguna, Philippines</p>
 
   <div class="content-text">
-    <h2>Python Engineer</h2>
+    <h2 style="font-family: 'Libre Bodoni', serif; font-weight: 500;">Python Engineer</h2>
     <sup>
       Bachelor of Computer Science from TUP Manila
     </sup>
@@ -27,10 +27,11 @@
 {% endblock %}
 
 {% block body %}
+<!--Tech Stack-->
 <section id="projects" class="project-container container">
   <div class="division"></div>
   <div class="content-text">
-    <h2>What I work with</h2>
+    <h2>What I currently know</h2>
     <div class="skills-grid">      
             <div class="textcard">
               <div class="skill-icons"><i class="fa-brands fa-python"></i></div>
@@ -105,15 +106,95 @@
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="project-container container">
-  <div class="division"></div>
+<!--Experience-->
+<section id="experience" class="experience-container container">
+  <div class="division "></div>  
 
-  <div class="content-text">
-    <h2>Projects</h2>
-    <p>Check out some of my projects</p>
+  <div class="container">
+    <h1 class="content-text-two">Experience</h1>
+  <ul class="timeline">
+    <li class="timeline-item">
+      <h3>Virtuality Services</h3>
+      <h4>Web Developer</h4>
+      <time>March 2024 – July 2024</time>
+      <p>Added an Attendance system to the Company Website. Minor website modifications. The project ended in March 2024.</p>
+    </li>    
+    <li class="timeline-item">
+      <h3>Freelance</h3>
+      <h4></h4>
+      <time>October 2024 – Present</time>
+      <p>I take on video editing gigs online from time to time</p>
+    </li>
+  </ul>
   </div>
 
+</section>
+
+<!-- Projects2 -->
+ <section id="projects2" class="project-container container">
+  <div class="division"></div>
+    <div class="container">    
+    <h1 class="content-text-two">Projects</h1>
+    <p>Check out some of my projects</p>
+    </div>
+
+   <div class="projects-container">
+
+    <!-- Project Card -->
+    <div class="project-card">
+      <img src="project-image1.jpg" alt="TT4D Screenshot">
+      <div class="project-title">Project 1</div>
+      <div class="project-description">
+        Proj descript
+      </div>
+      <div class="tags">
+        <div class="tag">Python</div>
+        <div class="tag">Docker</div>
+        <div class="tag">FastAPI</div>
+        <div class="tag">Sqlite</div>
+        <div class="tag">Javascript</div>
+        <div class="tag">Flask</div>
+        <div class="tag">CSS</div>
+      </div>
+      <div>
+        <a href="#"class="btn btn-primary">Website</a>
+        <a href="#" class="btn btn-secondary">Source <i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Another Project Card -->
+    <div class="project-card">
+      <img src="project-image2.jpg" alt="Tradingview Alerts Screenshot">
+      <div class="project-title">Tradingview Telegram Alerts</div>
+      <div class="project-description">
+        Real-time trading alerts with chart snapshots sent to Telegram to keep traders informed.
+      </div>
+      <div class="tags">
+        <div class="tag">Docker</div>
+        <div class="tag">FastAPI</div>
+        <div class="tag">Fly.io</div>
+        <div class="tag">Python</div>
+        <div class="tag">Selenium</div>
+        <div class="tag">Telegram Bot API</div>
+      </div>
+      <div class="buttons">
+        <a href="#" class="btn btn-secondary">Source <i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+  </div>
+  
+
+
+ </section>
+
+<!-- Projects 
+<section id="projects" class="project-container container">
+  <div class="division"></div>
+    <div class="container">    
+    <h1 class="content-text-two">Projects</h1>
+    <p>Check out some of my projects</p>
+    </div>
   <div class="container">
     <div class="project-card">
       <table>
@@ -141,6 +222,8 @@
       </table>
     </div>
   </div>
-  <a href="{{url_for('projects_page')}}" class="btn btn-secondary">See More <i class="fas fa-arrow-right"></i></a>
-</section>
+  <a href="{{url_for('projects_page')}}" class="btn btn-secondary">See More <i class="fas fa-arrow-right"></i></a> 
+    </section>  -->
+
+
 {% endblock %}
